@@ -3,7 +3,6 @@
 #include <iomanip>
 using namespace std;
 
-// Constantes a utilizar
 const float PI = 3.1415926536;
 const int MAX_FIGS = 3;
 const int MAX_PREG = 20;
@@ -16,7 +15,7 @@ struct Resultados {
 };
 
 
-const string nomFigGeom[MAX_FIGS] = { "Triángulo", "Rectángulo", "Círculo" };
+const string nomFigGeom[MAX_FIGS] = { "TriÃ¡ngulo", "RectÃ¡ngulo", "CÃ­rculo" };
 
 
 void CantRespFig(Resultados res[], int cantFig) {
@@ -52,15 +51,15 @@ void ProCvarLFM(Resultados res[], int cantFig) {
 
 
         if (tipoFigura == 0) {
-            cout << "Ingrese base y altura del triángulo: ";
+            cout << "Ingrese base y altura del triÃ¡ngulo: ";
             cin >> base >> altura;
             supCorrecta = FigsDosArg(base, altura, tipoFigura);
         } else if (tipoFigura == 1) {
-            cout << "Ingrese base y altura del rectángulo: ";
+            cout << "Ingrese base y altura del rectÃ¡ngulo: ";
             cin >> base >> altura;
             supCorrecta = FigsDosArg(base, altura, tipoFigura);
         } else if (tipoFigura == 2) {
-            cout << "Ingrese el radio del círculo: ";
+            cout << "Ingrese el radio del cÃ­rculo: ";
             cin >> radio;
             supCorrecta = SuperficieCirculo(radio);
         }
@@ -69,12 +68,12 @@ void ProCvarLFM(Resultados res[], int cantFig) {
         res[tipoFigura].cantPreg++;
 
 
-        cout << "¿Cuál es la superficie del " << nomFigGeom[tipoFigura] << "?: ";
+        cout << "Â¿CuÃ¡l es la superficie del " << nomFigGeom[tipoFigura] << "?: ";
         cin >> respuestaAlumno;
 
 
         if (fabs(respuestaAlumno - supCorrecta) < 0.01) {
-            cout << "¡Correcto!\n";
+            cout << "Â¡Correcto!\n";
             res[tipoFigura].cantRespCor++;
         } else {
             cout << "Incorrecto. La superficie correcta es: " << supCorrecta << endl;
